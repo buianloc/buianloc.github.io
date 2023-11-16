@@ -11,7 +11,7 @@
 
 <script>
     // Specify the path to your images folder
-    var directory = "./images/";
+    var directory = "images/";
 
     // Fetch images and create gallery
     fetch(directory)
@@ -19,7 +19,7 @@
         .then(data => {
             var parser = new DOMParser();
             var htmlDoc = parser.parseFromString(data, 'text/html');
-            var links = htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".png"], a[href$=".jpeg"], a[href$=".gif"]');
+            var links = htmlDoc.querySelectorAll('a');
 
             var gallery = document.getElementById("gallery");
 
@@ -35,4 +35,5 @@
 
 </body>
 </html>
+
 
