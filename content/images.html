@@ -10,23 +10,19 @@
 <div id="gallery"></div>
 
 <script>
-    // Specify the path to your images folder
-    var directory = "images/";
+    // Specify the path to your images JSON file
+    var jsonFilePath = "images.json";
 
-    // Fetch images and create gallery
-    fetch(directory)
-        .then(response => response.text())
+    // Fetch JSON file and create gallery
+    fetch(jsonFilePath)
+        .then(response => response.json())
         .then(data => {
-            var parser = new DOMParser();
-            var htmlDoc = parser.parseFromString(data, 'text/html');
-            var links = htmlDoc.querySelectorAll('a');
-
             var gallery = document.getElementById("gallery");
 
-            links.forEach(function (link) {
+            data.images.forEach(function (imageUrl) {
                 var img = document.createElement("img");
-                img.src = directory + link.getAttribute("href");
-                img.alt = link.getAttribute("href");
+                img.src = imageUrl;
+                img.alt = imageUrl;
                 gallery.appendChild(img);
             });
         })
@@ -35,5 +31,3 @@
 
 </body>
 </html>
-
-
