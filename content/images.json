@@ -1,8 +1,8 @@
 {
   "images": [
-    "images/photo_2023-11-16_22-40-27.jpg",
-    "images/photo_2023-11-16_22-40-52.jpg",
-    "images/photo_2023-11-16_22-40-57.jpg",
+    "https://github.com/buianloc/buianloc.github.io/blob/main/content/images/photo_2023-11-16_22-40-27.jpg",
+    "https://github.com/buianloc/buianloc.github.io/blob/main/content/images/photo_2023-11-16_22-40-52.jpg",
+    "https://github.com/buianloc/buianloc.github.io/blob/main/content/images/photo_2023-11-16_22-40-57.jpg",
     // Add more image URLs as needed
   ]
 }
